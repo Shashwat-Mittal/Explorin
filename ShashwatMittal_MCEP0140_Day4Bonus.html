@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset=utf-8 />
+<title>Amount Calculator</title>
+<style type="text/css">
+*{
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+text-align: center;
+}
+
+body {
+background: linear-gradient(to right, #36d1dc 0%, #5b86e5 100%);    
+}
+div.relative {
+  position: relative;
+  width: 600px;
+  height: 800px;
+  margin-left: auto;
+  margin-right:auto;
+  background-color:#3090C7;
+} 
+div.a1 {
+  position: absolute;
+  top: 100px;
+  left:500px;
+  text-align:center;
+  width: 500px;
+  height: 500px;
+  background-color:lavender;
+  
+}
+</style> 
+</head>
+<script>
+function divideBy() 
+{ 
+    num1 = document.getElementById("firstNumber").value;
+    num2 = document.getElementById("secondNumber").value;
+
+document.getElementById("result").innerHTML = num1 / num2;
+}
+function myFunction() {
+  document.getElementById("con").innerHTML = "Contribution Per Person Is:";
+}
+</script>
+<body>
+
+<br>
+<h1 style="color:darkslateblue">Week 1| Day 4 Working with JavaScript</h1>
+<br>
+
+<div class="a1">
+<h1 style="color:midnightblue; ">Amount Calculator</h1>
+<h2 style="color:deeppink ;">Enter Bill Amount</h2>
+<input type="text" id="firstNumber" /><br>
+<br>
+<h2 style="color:crimson ;" >How Many People are Sharing the Bill</h2>
+<input type="text" id="secondNumber" /><br>
+<br>
+<button style="background-color:#54C571; color:gold; " onclick="myFunction(); divideBy()">SPLIT</button>
+<br>
+<br>
+<span style="color:orangered;" id="con"></span> <span style="color:orangered" id = "result"></span>
+</div>
+</body>
+</html>
